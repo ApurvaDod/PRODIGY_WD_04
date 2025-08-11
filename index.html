@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+<div id="header">
+ <div class="container">
+    <nav>
+<img src="images/A.png" class="A"> 
+<ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About Me</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+</ul>
+
+    </nav>
+    <div class="header-text">
+<p> UI/UX Designer</p>
+<h1>Hi, I am <span>Apurva</span> Dod <br>from India</h1>
+    </div>
+ </div>
+</div>
+
+
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Aboutme2.jpg" >
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello, I am Apurva Chandrashekhar Dod, a second-year Information Technology 
+                    student at Usha Mittal Institute of Technology. My passion for technology 
+                    and innovation has always driven me to explore emerging fields</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Education')">Education</p>
+                        <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Interest')">Interest</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Education">
+                        <ul>
+                            <li><span>Bachelor of Technology (B.Tech)</span><br>in Information Technology</li>
+                            <li><span>Usha Mittal Institute of Technology</span><br>Mumbai</li>
+                            <li>2023 – Present (Expected Graduation: 2027)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Skills">
+                        <ul>
+                            <li><span>Web Development:</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>UI/UX Design: </span><br>Figma, Adobe XD, Canva</li>
+                            <li><span>Cybersecurity Basics:</span><br>Secure coding practices, data encryption techniques</li>
+                            <li><span>Backend & Databases:</span><br>Node.js, Express.js, MongoDB/MySQL</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Interest">
+                        <ul>
+                            <li><span>Defense Technology & Innovation:</span><br>Passion for contributing to advanced technological solutions for national security</li>
+                            <li><span>Artificial Intelligence & Automation:</span><br>Keen on exploring AI/ML applications in defense and research</li>
+                            <li><span>Passion for defense technology, research, and innovation</span></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.jpg" >
+                <div class="layer">
+                    <h3>Cafe Management System</h3>
+                    <p>The Cafe Management is the QR based system mainly build for the easy access in cafes and restrurants.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jpg" >
+                <div class="layer">
+                    <h3>Cafe Management System</h3>
+                    <p>The system guarantees the 
+                        seemless experience while ordering and also provide a good backend data to the brand owners which help to secure data.</p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jpg" >
+                <div class="layer">
+                    <h3>Cafe Management System</h3>
+                    <p>The system 
+                        is mainly design to reduce paperwork and focuses on SDGs. </p>
+                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <!-- Left Side -->
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i> aapurva1920@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="contact-right">
+                <form id="contactForm">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+                <p id="formStatus" style="display:none; color:#4CAF50; margin-top:10px;">✅ Message Sent Successfully!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+var tablinks=document.getElementsByClassName("tab-links")
+var tabcontents=document.getElementsByClassName("tab-contents")
+
+function opentab(tabname){
+    for(tablink of tablinks){
+    tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab")
+}
+
+</script>
+
+    </body>
+</html>
